@@ -1,0 +1,22 @@
+{
+  "name": "KJExpandableTableTree",
+  "version": "0.1.0",
+  "summary": "A short description of KJExpandableTableTree.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/bluelabeldeveloper1/KJExpandableTableTree",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "bluelabeldeveloper1": "kiran.jasvanee@yahoo.com"
+  },
+  "source": {
+    "git": "https://github.com/bluelabeldeveloper1/KJExpandableTableTree.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "KJExpandableTableTree/Classes/**/*"
+}

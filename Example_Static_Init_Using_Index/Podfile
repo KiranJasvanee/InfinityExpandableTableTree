@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KJExpandableTableTree_Example' do
+  pod 'KJExpandableTableTree', :path => '../'
+
+  target 'KJExpandableTableTree_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
