@@ -1,0 +1,16 @@
+PODS:
+  - KJExpandableTableTree (0.1.0)
+
+DEPENDENCIES:
+  - KJExpandableTableTree (from `../`)
+
+EXTERNAL SOURCES:
+  KJExpandableTableTree:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KJExpandableTableTree: e4fef74e14cb171bcb404db86a2eaf5b5bdc6171
+
+PODFILE CHECKSUM: 0fc9bec4e0eeca266961c79ec487a746bccc2876
+
+COCOAPODS: 1.2.1
