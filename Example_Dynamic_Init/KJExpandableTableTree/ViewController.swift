@@ -156,7 +156,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = kjtreeInstance.tableView(tableView, didSelectRowAt: indexPath)
+        let node = kjtreeInstance.tableView(tableView, didSelectRowAt: indexPath)
+        print(node.index)
+        // if you've added any identifier or used indexing format
+        print(node.givenIndex)
     }
 }
 
