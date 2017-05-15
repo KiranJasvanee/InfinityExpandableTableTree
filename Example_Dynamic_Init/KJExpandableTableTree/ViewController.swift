@@ -149,7 +149,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             if tableviewcell == nil {
                 tableviewcell = UITableViewCell(style: .default, reuseIdentifier: "cellidentity")
             }
-            
+            tableviewcell?.textLabel?.text = node.index
             tableviewcell?.backgroundColor = UIColor.yellow
             tableviewcell?.selectionStyle = .none
             return tableviewcell!

@@ -1,6 +1,0 @@
-framework module KJExpandableTableTree {
-  umbrella header "KJExpandableTableTree-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -320,7 +320,7 @@ public class KJTree{
     enum ExpansionOption {
         case expand, shrink, none
     }
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> String{
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Node{
         
         let node = arrayVisibles[indexPath.row]
         var cellsToBeUpdated: [NSInteger] = []
@@ -351,7 +351,7 @@ public class KJTree{
             
             // Go further if there are childs available
             guard parent.arrayChilds.count != 0 else{
-                return ""
+                return node
             }
             
             // Expand
@@ -411,7 +411,7 @@ public class KJTree{
         }
         
         
-        return node.index
+        return node
     }
     func visibleChilds(childs: [Child], indices:inout [String], index: NSInteger, cellsUpdatedHolder cellsToBeUpdated:inout [NSInteger], expansionOption expansion: inout ExpansionOption) -> NSInteger {
         
