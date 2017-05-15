@@ -1,24 +1,19 @@
 # KJExpandableTableTree
 
-[![CI Status](http://img.shields.io/travis/bluelabeldeveloper1/KJExpandableTableTree.svg?style=flat)](https://travis-ci.org/bluelabeldeveloper1/KJExpandableTableTree)
-[![Version](https://img.shields.io/cocoapods/v/KJExpandableTableTree.svg?style=flat)](http://cocoapods.org/pods/KJExpandableTableTree)
-[![License](https://img.shields.io/cocoapods/l/KJExpandableTableTree.svg?style=flat)](http://cocoapods.org/pods/KJExpandableTableTree)
-[![Platform](https://img.shields.io/cocoapods/p/KJExpandableTableTree.svg?style=flat)](http://cocoapods.org/pods/KJExpandableTableTree)
+[![Twitter: @KiranJasvanee](https://img.shields.io/badge/contact-@kiranjasvanee-blue.svg?style=flat)](https://twitter.com/Kiranjasvanee)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/KiranJasvanee/KJExpandableTableTree/blob/master/LICENSE)
+[![Issues](https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree/issues)
+[![Forks](https://img.shields.io/github/forks/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
+[![Stars](https://img.shields.io/github/stars/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
+[![Language](https://img.shields.io/badge/Language-Swift-yellow.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
 
-## Example
+**NOTE: Pod version requires 1.2.0 & later**
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Preview
+Expand cells in `TableView` up to ∞-1.   <br />   <br />
 
-## Requirements
+**NOTE: In below presentation, if animation looks laggy, wait till page completes it loading. It's smooth as you scrolls**
 
-## Installation
-
-KJExpandableTableTree is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "KJExpandableTableTree"
-```
 
 ## Author
 
