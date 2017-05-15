@@ -5,7 +5,6 @@ target 'KJExpandableTableTree_Example' do
 
   target 'KJExpandableTableTree_Tests' do
     inherit! :search_paths
-
     
   end
 end

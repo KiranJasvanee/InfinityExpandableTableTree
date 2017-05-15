@@ -15,6 +15,22 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7AB595D5F21E4405FE774B16 /* Pods_KJExpandableTableTree_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A588D8A3E3C6882AA19D4CC /* Pods_KJExpandableTableTree_Example.framework */; };
+		DD35936A1EC5D4DC0029A06D /* _dot1_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3593681EC5D4DC0029A06D /* _dot1_TableViewCell.swift */; };
+		DD35936B1EC5D4DC0029A06D /* _dot1_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3593691EC5D4DC0029A06D /* _dot1_TableViewCell.xib */; };
+		DD35936E1EC5E96C0029A06D /* index_1-1_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35936C1EC5E96C0029A06D /* index_1-1_TableViewCell.swift */; };
+		DD35936F1EC5E96C0029A06D /* index_1-1_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD35936D1EC5E96C0029A06D /* index_1-1_TableViewCell.xib */; };
+		DD3593721EC5EC110029A06D /* index_2_1_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3593701EC5EC110029A06D /* index_2_1_TableViewCell.swift */; };
+		DD3593731EC5EC110029A06D /* index_2_1_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3593711EC5EC110029A06D /* index_2_1_TableViewCell.xib */; };
+		DD35937A1EC5F3510029A06D /* sliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3593781EC5F3510029A06D /* sliderTableViewCell.swift */; };
+		DD35937B1EC5F3510029A06D /* sliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3593791EC5F3510029A06D /* sliderTableViewCell.xib */; };
+		DD35937E1EC5F37A0029A06D /* segmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35937C1EC5F37A0029A06D /* segmentTableViewCell.swift */; };
+		DD35937F1EC5F37A0029A06D /* segmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD35937D1EC5F37A0029A06D /* segmentTableViewCell.xib */; };
+		DD3593821EC5F4120029A06D /* progressbarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3593801EC5F4120029A06D /* progressbarTableViewCell.swift */; };
+		DD3593831EC5F4120029A06D /* progressbarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3593811EC5F4120029A06D /* progressbarTableViewCell.xib */; };
+		DD3593861EC5F4410029A06D /* stepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3593841EC5F4410029A06D /* stepperTableViewCell.swift */; };
+		DD3593871EC5F4410029A06D /* stepperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3593851EC5F4410029A06D /* stepperTableViewCell.xib */; };
+		DD35938A1EC5F8460029A06D /* index_3_Leaf_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3593881EC5F8460029A06D /* index_3_Leaf_TableViewCell.swift */; };
+		DD35938B1EC5F8460029A06D /* index_3_Leaf_TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3593891EC5F8460029A06D /* index_3_Leaf_TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0A588D8A3E3C6882AA19D4CC /* Pods_KJExpandableTableTree_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJExpandableTableTree_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BB44E42A47F98E1153C9E9D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1BB44E42A47F98E1153C9E9D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* KJExpandableTableTree_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJExpandableTableTree_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,11 +56,27 @@
 		607FACE51AFB9204008FA782 /* KJExpandableTableTree_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJExpandableTableTree_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		656BEDD344EA7DB2EF482768 /* KJExpandableTableTree.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = KJExpandableTableTree.podspec; path = ../KJExpandableTableTree.podspec; sourceTree = "<group>"; };
-		6CE35EE76F41A83FCA397DFE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		656BEDD344EA7DB2EF482768 /* KJExpandableTableTree.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KJExpandableTableTree.podspec; path = ../KJExpandableTableTree.podspec; sourceTree = "<group>"; };
+		6CE35EE76F41A83FCA397DFE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8D089D80EB52F8A1826E6E25 /* Pods-KJExpandableTableTree_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJExpandableTableTree_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KJExpandableTableTree_Example/Pods-KJExpandableTableTree_Example.release.xcconfig"; sourceTree = "<group>"; };
 		924AC08FA7041CE67E88A82D /* Pods-KJExpandableTableTree_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJExpandableTableTree_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KJExpandableTableTree_Tests/Pods-KJExpandableTableTree_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A29FFCBA9A96C93CA43840AF /* Pods-KJExpandableTableTree_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJExpandableTableTree_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KJExpandableTableTree_Example/Pods-KJExpandableTableTree_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DD3593681EC5D4DC0029A06D /* _dot1_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _dot1_TableViewCell.swift; sourceTree = "<group>"; };
+		DD3593691EC5D4DC0029A06D /* _dot1_TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = _dot1_TableViewCell.xib; sourceTree = "<group>"; };
+		DD35936C1EC5E96C0029A06D /* index_1-1_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "index_1-1_TableViewCell.swift"; sourceTree = "<group>"; };
+		DD35936D1EC5E96C0029A06D /* index_1-1_TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "index_1-1_TableViewCell.xib"; sourceTree = "<group>"; };
+		DD3593701EC5EC110029A06D /* index_2_1_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = index_2_1_TableViewCell.swift; sourceTree = "<group>"; };
+		DD3593711EC5EC110029A06D /* index_2_1_TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = index_2_1_TableViewCell.xib; sourceTree = "<group>"; };
+		DD3593781EC5F3510029A06D /* sliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sliderTableViewCell.swift; sourceTree = "<group>"; };
+		DD3593791EC5F3510029A06D /* sliderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sliderTableViewCell.xib; sourceTree = "<group>"; };
+		DD35937C1EC5F37A0029A06D /* segmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = segmentTableViewCell.swift; sourceTree = "<group>"; };
+		DD35937D1EC5F37A0029A06D /* segmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = segmentTableViewCell.xib; sourceTree = "<group>"; };
+		DD3593801EC5F4120029A06D /* progressbarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = progressbarTableViewCell.swift; sourceTree = "<group>"; };
+		DD3593811EC5F4120029A06D /* progressbarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = progressbarTableViewCell.xib; sourceTree = "<group>"; };
+		DD3593841EC5F4410029A06D /* stepperTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stepperTableViewCell.swift; sourceTree = "<group>"; };
+		DD3593851EC5F4410029A06D /* stepperTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = stepperTableViewCell.xib; sourceTree = "<group>"; };
+		DD3593881EC5F8460029A06D /* index_3_Leaf_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = index_3_Leaf_TableViewCell.swift; sourceTree = "<group>"; };
+		DD3593891EC5F8460029A06D /* index_3_Leaf_TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = index_3_Leaf_TableViewCell.xib; sourceTree = "<group>"; };
 		E73CED2C25C0B862495838FD /* Pods-KJExpandableTableTree_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJExpandableTableTree_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KJExpandableTableTree_Tests/Pods-KJExpandableTableTree_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE8093697F3B6492A4166248 /* Pods_KJExpandableTableTree_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJExpandableTableTree_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +136,7 @@
 		607FACD21AFB9204008FA782 /* Example for KJExpandableTableTree */ = {
 			isa = PBXGroup;
 			children = (
+				DD3593571EC5CFFA0029A06D /* TableviewCells */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -148,6 +181,29 @@
 				1BB44E42A47F98E1153C9E9D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		DD3593571EC5CFFA0029A06D /* TableviewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DD3593681EC5D4DC0029A06D /* _dot1_TableViewCell.swift */,
+				DD3593691EC5D4DC0029A06D /* _dot1_TableViewCell.xib */,
+				DD35936C1EC5E96C0029A06D /* index_1-1_TableViewCell.swift */,
+				DD35936D1EC5E96C0029A06D /* index_1-1_TableViewCell.xib */,
+				DD3593701EC5EC110029A06D /* index_2_1_TableViewCell.swift */,
+				DD3593711EC5EC110029A06D /* index_2_1_TableViewCell.xib */,
+				DD3593781EC5F3510029A06D /* sliderTableViewCell.swift */,
+				DD3593791EC5F3510029A06D /* sliderTableViewCell.xib */,
+				DD35937C1EC5F37A0029A06D /* segmentTableViewCell.swift */,
+				DD35937D1EC5F37A0029A06D /* segmentTableViewCell.xib */,
+				DD3593801EC5F4120029A06D /* progressbarTableViewCell.swift */,
+				DD3593811EC5F4120029A06D /* progressbarTableViewCell.xib */,
+				DD3593841EC5F4410029A06D /* stepperTableViewCell.swift */,
+				DD3593851EC5F4410029A06D /* stepperTableViewCell.xib */,
+				DD3593881EC5F8460029A06D /* index_3_Leaf_TableViewCell.swift */,
+				DD3593891EC5F8460029A06D /* index_3_Leaf_TableViewCell.xib */,
+			);
+			path = TableviewCells;
 			sourceTree = "<group>";
 		};
 		F303E0C783DAB9D9D0C7DD77 /* Frameworks */ = {
@@ -249,8 +305,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				DD3593871EC5F4410029A06D /* stepperTableViewCell.xib in Resources */,
+				DD35937F1EC5F37A0029A06D /* segmentTableViewCell.xib in Resources */,
+				DD3593831EC5F4120029A06D /* progressbarTableViewCell.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				DD35936B1EC5D4DC0029A06D /* _dot1_TableViewCell.xib in Resources */,
+				DD35936F1EC5E96C0029A06D /* index_1-1_TableViewCell.xib in Resources */,
+				DD35938B1EC5F8460029A06D /* index_3_Leaf_TableViewCell.xib in Resources */,
+				DD35937B1EC5F3510029A06D /* sliderTableViewCell.xib in Resources */,
+				DD3593731EC5EC110029A06D /* index_2_1_TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +425,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD35936E1EC5E96C0029A06D /* index_1-1_TableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				DD3593861EC5F4410029A06D /* stepperTableViewCell.swift in Sources */,
+				DD35937E1EC5F37A0029A06D /* segmentTableViewCell.swift in Sources */,
+				DD35936A1EC5D4DC0029A06D /* _dot1_TableViewCell.swift in Sources */,
+				DD3593821EC5F4120029A06D /* progressbarTableViewCell.swift in Sources */,
+				DD35938A1EC5F8460029A06D /* index_3_Leaf_TableViewCell.swift in Sources */,
+				DD35937A1EC5F3510029A06D /* sliderTableViewCell.swift in Sources */,
+				DD3593721EC5EC110029A06D /* index_2_1_TableViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

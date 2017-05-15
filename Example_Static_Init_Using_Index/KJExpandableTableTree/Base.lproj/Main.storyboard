@@ -20,11 +20,27 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfA-WS-iVF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bfA-WS-iVF" secondAttribute="bottom" id="S2T-Fu-9M0"/>
+                            <constraint firstItem="bfA-WS-iVF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="SB1-g0-7H4"/>
+                            <constraint firstItem="bfA-WS-iVF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Z1T-Tt-wiB"/>
+                            <constraint firstAttribute="trailing" secondItem="bfA-WS-iVF" secondAttribute="trailing" id="se0-jp-Tb8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="bfA-WS-iVF" id="ft5-cC-lVN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="92" y="122"/>
         </scene>
     </scenes>
 </document>

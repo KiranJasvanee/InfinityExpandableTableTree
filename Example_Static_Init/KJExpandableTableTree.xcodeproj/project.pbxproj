@@ -14,7 +14,13 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		7AB595D5F21E4405FE774B16 /* Pods_KJExpandableTableTree_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A588D8A3E3C6882AA19D4CC /* Pods_KJExpandableTableTree_Example.framework */; };
+		7AB595D5F21E4405FE774B16 /* Pods_KJExpandableTableTree_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A588D8A3E3C6882AA19D4CC /* Pods_KJExpandableTableTree_Example.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DD3593511EC5CB610029A06D /* Childs2ndStageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35934B1EC5CB610029A06D /* Childs2ndStageTableViewCell.swift */; };
+		DD3593521EC5CB610029A06D /* Childs2ndStageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD35934C1EC5CB610029A06D /* Childs2ndStageTableViewCell.xib */; };
+		DD3593531EC5CB610029A06D /* Childs3rdStageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35934D1EC5CB610029A06D /* Childs3rdStageTableViewCell.swift */; };
+		DD3593541EC5CB610029A06D /* Childs3rdStageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD35934E1EC5CB610029A06D /* Childs3rdStageTableViewCell.xib */; };
+		DD3593551EC5CB610029A06D /* ParentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35934F1EC5CB610029A06D /* ParentsTableViewCell.swift */; };
+		DD3593561EC5CB610029A06D /* ParentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3593501EC5CB610029A06D /* ParentsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		0A588D8A3E3C6882AA19D4CC /* Pods_KJExpandableTableTree_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJExpandableTableTree_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BB44E42A47F98E1153C9E9D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1BB44E42A47F98E1153C9E9D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* KJExpandableTableTree_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJExpandableTableTree_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,11 +46,19 @@
 		607FACE51AFB9204008FA782 /* KJExpandableTableTree_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJExpandableTableTree_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		656BEDD344EA7DB2EF482768 /* KJExpandableTableTree.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = KJExpandableTableTree.podspec; path = ../KJExpandableTableTree.podspec; sourceTree = "<group>"; };
-		6CE35EE76F41A83FCA397DFE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		656BEDD344EA7DB2EF482768 /* KJExpandableTableTree.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KJExpandableTableTree.podspec; path = ../KJExpandableTableTree.podspec; sourceTree = "<group>"; };
+		6CE35EE76F41A83FCA397DFE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8D089D80EB52F8A1826E6E25 /* Pods-KJExpandableTableTree_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJExpandableTableTree_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KJExpandableTableTree_Example/Pods-KJExpandableTableTree_Example.release.xcconfig"; sourceTree = "<group>"; };
 		924AC08FA7041CE67E88A82D /* Pods-KJExpandableTableTree_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJExpandableTableTree_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KJExpandableTableTree_Tests/Pods-KJExpandableTableTree_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A29FFCBA9A96C93CA43840AF /* Pods-KJExpandableTableTree_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJExpandableTableTree_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KJExpandableTableTree_Example/Pods-KJExpandableTableTree_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DD35934B1EC5CB610029A06D /* Childs2ndStageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Childs2ndStageTableViewCell.swift; sourceTree = "<group>"; };
+		DD35934C1EC5CB610029A06D /* Childs2ndStageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Childs2ndStageTableViewCell.xib; sourceTree = "<group>"; };
+		DD35934D1EC5CB610029A06D /* Childs3rdStageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Childs3rdStageTableViewCell.swift; sourceTree = "<group>"; };
+		DD35934E1EC5CB610029A06D /* Childs3rdStageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Childs3rdStageTableViewCell.xib; sourceTree = "<group>"; };
+		DD35934F1EC5CB610029A06D /* ParentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentsTableViewCell.swift; sourceTree = "<group>"; };
+		DD3593501EC5CB610029A06D /* ParentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParentsTableViewCell.xib; sourceTree = "<group>"; };
+		DD924B5A1EC5C41E00C68FE5 /* KJExpandableTableTree.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KJExpandableTableTree.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/KJExpandableTableTree-bccmnjlbtmcdwaeyrwqftmcslios/Build/Products/Debug-iphonesimulator/KJExpandableTableTree/KJExpandableTableTree.framework"; sourceTree = "<group>"; };
+		DD924B5B1EC5C41E00C68FE5 /* Pods_KJExpandableTableTree_Tests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_KJExpandableTableTree_Tests.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/KJExpandableTableTree-bccmnjlbtmcdwaeyrwqftmcslios/Build/Products/Debug-iphonesimulator/Pods_KJExpandableTableTree_Tests.framework"; sourceTree = "<group>"; };
 		E73CED2C25C0B862495838FD /* Pods-KJExpandableTableTree_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KJExpandableTableTree_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KJExpandableTableTree_Tests/Pods-KJExpandableTableTree_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE8093697F3B6492A4166248 /* Pods_KJExpandableTableTree_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJExpandableTableTree_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +118,7 @@
 		607FACD21AFB9204008FA782 /* Example for KJExpandableTableTree */ = {
 			isa = PBXGroup;
 			children = (
+				DD35934A1EC5CB510029A06D /* TableviewCells */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -150,9 +165,24 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		DD35934A1EC5CB510029A06D /* TableviewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DD35934B1EC5CB610029A06D /* Childs2ndStageTableViewCell.swift */,
+				DD35934C1EC5CB610029A06D /* Childs2ndStageTableViewCell.xib */,
+				DD35934D1EC5CB610029A06D /* Childs3rdStageTableViewCell.swift */,
+				DD35934E1EC5CB610029A06D /* Childs3rdStageTableViewCell.xib */,
+				DD35934F1EC5CB610029A06D /* ParentsTableViewCell.swift */,
+				DD3593501EC5CB610029A06D /* ParentsTableViewCell.xib */,
+			);
+			path = TableviewCells;
+			sourceTree = "<group>";
+		};
 		F303E0C783DAB9D9D0C7DD77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD924B5A1EC5C41E00C68FE5 /* KJExpandableTableTree.framework */,
+				DD924B5B1EC5C41E00C68FE5 /* Pods_KJExpandableTableTree_Tests.framework */,
 				0A588D8A3E3C6882AA19D4CC /* Pods_KJExpandableTableTree_Example.framework */,
 				EE8093697F3B6492A4166248 /* Pods_KJExpandableTableTree_Tests.framework */,
 			);
@@ -215,6 +245,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 27W8RLH9AA;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -248,8 +279,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3593541EC5CB610029A06D /* Childs3rdStageTableViewCell.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				DD3593561EC5CB610029A06D /* ParentsTableViewCell.xib in Resources */,
+				DD3593521EC5CB610029A06D /* Childs2ndStageTableViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +395,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3593551EC5CB610029A06D /* ParentsTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				DD3593531EC5CB610029A06D /* Childs3rdStageTableViewCell.swift in Sources */,
+				DD3593511EC5CB610029A06D /* Childs2ndStageTableViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,7 +533,9 @@
 			baseConfigurationReference = A29FFCBA9A96C93CA43840AF /* Pods-KJExpandableTableTree_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 27W8RLH9AA;
 				INFOPLIST_FILE = KJExpandableTableTree/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,7 +549,9 @@
 			baseConfigurationReference = 8D089D80EB52F8A1826E6E25 /* Pods-KJExpandableTableTree_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 27W8RLH9AA;
 				INFOPLIST_FILE = KJExpandableTableTree/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

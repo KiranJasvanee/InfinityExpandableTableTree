@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CC784087274EBD70133D9A8CC14E710 /* KJExpandableTableTree-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9FC0057623AB2D1A91659CBBA0591C4 /* KJExpandableTableTree-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15632BB91EC440A686A53EE6BE6B3CFF /* KJTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB84E4CB920C96D0ED40C1E62016ACB /* KJTree.swift */; };
+		3CC784087274EBD70133D9A8CC14E710 /* KJExpandableTableTree-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24EC487D6A2B9213FA37E8735B2D47D8 /* KJExpandableTableTree-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4966DBCD1CB529D68CB74B875E09027F /* KJExpandableTableTree-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAC3D8C445F4FBE4FB3A8FEB8E9E15E /* KJExpandableTableTree-dummy.m */; };
 		523C90774244CAC1E7B90246719E1EBE /* Pods-KJExpandableTableTree_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D71B406233D6BFFA7A10F9D9D65518C9 /* Pods-KJExpandableTableTree_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83DDE025F2BE75F10B8FB1B70CFFA619 /* KJExpandableTableTree-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15451727C401158178B96C9DE55A6A29 /* KJExpandableTableTree-dummy.m */; };
 		930030A5620C8EA1CDCCC99CC8FF38DC /* Pods-KJExpandableTableTree_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576B788E784EE38E13BD30FDF769500 /* Pods-KJExpandableTableTree_Example-dummy.m */; };
 		A02E86ADE32A7C3E0D007D2FDB89C302 /* Pods-KJExpandableTableTree_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5804F75A4901190EFD4CD9D1F1182E8A /* Pods-KJExpandableTableTree_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4D640FB5E81DB5238B65334585984D8 /* Pods-KJExpandableTableTree_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6A0B4A38B050570716A7070ED4E78B /* Pods-KJExpandableTableTree_Tests-dummy.m */; };
-		ABC0BC736AF0B4F9FD1506392AC88A8F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25A8AF84B22701CADC040AD06EEE58E /* ReplaceMe.swift */; };
 		AC00E0042905DB5DF13B14F2D79B299E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		BFDA016FC317C3E2215C3DC584593E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		E051C3714091E1547E19D4C6F065E7C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -31,10 +31,12 @@
 
 /* Begin PBXFileReference section */
 		023D8E208EC6A801EDF0A37B44E4F629 /* KJExpandableTableTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KJExpandableTableTree.framework; path = KJExpandableTableTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		15451727C401158178B96C9DE55A6A29 /* KJExpandableTableTree-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KJExpandableTableTree-dummy.m"; sourceTree = "<group>"; };
 		1A14BCC0C1648E02BD60B6D23FD4933E /* Pods-KJExpandableTableTree_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJExpandableTableTree_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1B536A5C19E7404C347B004F6BC8CA37 /* Pods-KJExpandableTableTree_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJExpandableTableTree_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1DF49F9E18D3AE248AA59BD0708D6869 /* Pods-KJExpandableTableTree_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KJExpandableTableTree_Tests.modulemap"; sourceTree = "<group>"; };
+		24EC487D6A2B9213FA37E8735B2D47D8 /* KJExpandableTableTree-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJExpandableTableTree-umbrella.h"; sourceTree = "<group>"; };
+		292F0B0F4549B5C35FAA8CB015CC6A27 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3341FD083F282B403B4A2CE0FE025606 /* KJExpandableTableTree-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJExpandableTableTree-prefix.pch"; sourceTree = "<group>"; };
 		4D10ED0F361A98B1CB405E952B23F50F /* Pods-KJExpandableTableTree_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJExpandableTableTree_Example-resources.sh"; sourceTree = "<group>"; };
 		5576B788E784EE38E13BD30FDF769500 /* Pods-KJExpandableTableTree_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KJExpandableTableTree_Example-dummy.m"; sourceTree = "<group>"; };
 		5804F75A4901190EFD4CD9D1F1182E8A /* Pods-KJExpandableTableTree_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KJExpandableTableTree_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -46,22 +48,20 @@
 		6F78E8A947206440308D23CBFB85A233 /* Pods-KJExpandableTableTree_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJExpandableTableTree_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7F7C9EA3F2E28BB4A4EED5FF6465A0BA /* Pods-KJExpandableTableTree_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJExpandableTableTree_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F9D9583153A85749134B7D5D72E9898 /* Pods-KJExpandableTableTree_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJExpandableTableTree_Example-frameworks.sh"; sourceTree = "<group>"; };
-		904242295669657414C17C15FCDBB167 /* KJExpandableTableTree-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJExpandableTableTree-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		977F14FDF64A206279A8D72B9D21D22D /* Pods-KJExpandableTableTree_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJExpandableTableTree_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A25A8AF84B22701CADC040AD06EEE58E /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		A4D13FC8BFD7180FE3628288E16E424C /* Pods_KJExpandableTableTree_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KJExpandableTableTree_Tests.framework; path = "Pods-KJExpandableTableTree_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8FBCCC94A9EDE6ECAF6BE53E106055B /* KJExpandableTableTree.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KJExpandableTableTree.xcconfig; sourceTree = "<group>"; };
+		AFB84E4CB920C96D0ED40C1E62016ACB /* KJTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KJTree.swift; sourceTree = "<group>"; };
 		BEA07670FEAF60D7811EC0CDD8FBA5E1 /* Pods-KJExpandableTableTree_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJExpandableTableTree_Tests-resources.sh"; sourceTree = "<group>"; };
+		CCA4A046D4EB2BB12370C2CB7062BEB8 /* KJExpandableTableTree.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KJExpandableTableTree.xcconfig; sourceTree = "<group>"; };
+		D1F6C441493316A03EDF312C5E00B9CF /* KJExpandableTableTree.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KJExpandableTableTree.modulemap; sourceTree = "<group>"; };
 		D71B406233D6BFFA7A10F9D9D65518C9 /* Pods-KJExpandableTableTree_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KJExpandableTableTree_Example-umbrella.h"; sourceTree = "<group>"; };
-		D9FC0057623AB2D1A91659CBBA0591C4 /* KJExpandableTableTree-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJExpandableTableTree-umbrella.h"; sourceTree = "<group>"; };
 		DA0A24DA15AE7DC4BAF94AA0C9E0391A /* Pods-KJExpandableTableTree_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KJExpandableTableTree_Example.modulemap"; sourceTree = "<group>"; };
 		E1C684A89017790C4B281AFD24E676CC /* Pods-KJExpandableTableTree_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJExpandableTableTree_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E7EC7F3BA0182F5CADC0D89327DF34A8 /* Pods-KJExpandableTableTree_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KJExpandableTableTree_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EEAC3D8C445F4FBE4FB3A8FEB8E9E15E /* KJExpandableTableTree-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KJExpandableTableTree-dummy.m"; sourceTree = "<group>"; };
 		F051F7883AB8832ACD043971830F72B9 /* Pods-KJExpandableTableTree_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJExpandableTableTree_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		F400E2A45017F1CD9D90493E0486EFFD /* KJExpandableTableTree.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KJExpandableTableTree.modulemap; sourceTree = "<group>"; };
 		F6AD0BDFF3B295DBE354D2C7B3F0D27F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF4320AD8A1D8227BE7F08068A703A3A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,15 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0011C821BB7773F6099CA35EB38362AF /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A25A8AF84B22701CADC040AD06EEE58E /* ReplaceMe.swift */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		118D5EE222B1BCC683AA806DF1E02132 /* Pods-KJExpandableTableTree_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,20 +117,6 @@
 				6A65FAC88BCCDFB8850AD623855DB2B4 /* Pods-KJExpandableTableTree_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6407707B94CAB74177EA6960C84A8DAD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FF4320AD8A1D8227BE7F08068A703A3A /* Info.plist */,
-				F400E2A45017F1CD9D90493E0486EFFD /* KJExpandableTableTree.modulemap */,
-				B8FBCCC94A9EDE6ECAF6BE53E106055B /* KJExpandableTableTree.xcconfig */,
-				15451727C401158178B96C9DE55A6A29 /* KJExpandableTableTree-dummy.m */,
-				904242295669657414C17C15FCDBB167 /* KJExpandableTableTree-prefix.pch */,
-				D9FC0057623AB2D1A91659CBBA0591C4 /* KJExpandableTableTree-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/KJExpandableTableTree";
 			sourceTree = "<group>";
 		};
 		6A65FAC88BCCDFB8850AD623855DB2B4 /* Pods-KJExpandableTableTree_Tests */ = {
@@ -171,15 +148,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		80D5FEA72FDA9F2A282145D1146A0EEE /* KJExpandableTableTree */ = {
-			isa = PBXGroup;
-			children = (
-				0011C821BB7773F6099CA35EB38362AF /* Classes */,
-			);
-			name = KJExpandableTableTree;
-			path = KJExpandableTableTree;
-			sourceTree = "<group>";
-		};
 		96B177A4569A1321CFE0A265FC5D43E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,14 +158,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		98BEE974F3304C8CEDD6E90EF298C015 /* KJExpandableTableTree */ = {
+		A8667E4E552471ABC3189DC9C7EFFCBA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				80D5FEA72FDA9F2A282145D1146A0EEE /* KJExpandableTableTree */,
-				6407707B94CAB74177EA6960C84A8DAD /* Support Files */,
+				AFB84E4CB920C96D0ED40C1E62016ACB /* KJTree.swift */,
 			);
-			name = KJExpandableTableTree;
-			path = ../..;
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -211,7 +178,7 @@
 		CBA2897D0FED53628502CFEEFB894CD6 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				98BEE974F3304C8CEDD6E90EF298C015 /* KJExpandableTableTree */,
+				FD3542216AE47C0D2E8705393F4FF2E3 /* KJExpandableTableTree */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -222,6 +189,39 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		DE042B1775066A8F803576CFC949133B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				292F0B0F4549B5C35FAA8CB015CC6A27 /* Info.plist */,
+				D1F6C441493316A03EDF312C5E00B9CF /* KJExpandableTableTree.modulemap */,
+				CCA4A046D4EB2BB12370C2CB7062BEB8 /* KJExpandableTableTree.xcconfig */,
+				EEAC3D8C445F4FBE4FB3A8FEB8E9E15E /* KJExpandableTableTree-dummy.m */,
+				3341FD083F282B403B4A2CE0FE025606 /* KJExpandableTableTree-prefix.pch */,
+				24EC487D6A2B9213FA37E8735B2D47D8 /* KJExpandableTableTree-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example_Static_Init/Pods/Target Support Files/KJExpandableTableTree";
+			sourceTree = "<group>";
+		};
+		FD3542216AE47C0D2E8705393F4FF2E3 /* KJExpandableTableTree */ = {
+			isa = PBXGroup;
+			children = (
+				FD7C88D51FCCAC45F23675C48FA17C6E /* KJExpandableTableTree */,
+				DE042B1775066A8F803576CFC949133B /* Support Files */,
+			);
+			name = KJExpandableTableTree;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FD7C88D51FCCAC45F23675C48FA17C6E /* KJExpandableTableTree */ = {
+			isa = PBXGroup;
+			children = (
+				A8667E4E552471ABC3189DC9C7EFFCBA /* Classes */,
+			);
+			name = KJExpandableTableTree;
+			path = KJExpandableTableTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FB9CFA1CBA4D62D16C544D7363C888B /* Build configuration list for PBXNativeTarget "KJExpandableTableTree" */;
 			buildPhases = (
-				0E4537B0E6F1B4CB6B86EC7A1837C26F /* Sources */,
+				3155271B89BD719E4AC33CA17B76135E /* Sources */,
 				06FF44A99604D81923B995AE8AE95A57 /* Frameworks */,
 				8CC46DE7F084AE51D5DCAAB8DD10B132 /* Headers */,
 			);
@@ -335,12 +335,12 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0E4537B0E6F1B4CB6B86EC7A1837C26F /* Sources */ = {
+		3155271B89BD719E4AC33CA17B76135E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83DDE025F2BE75F10B8FB1B70CFFA619 /* KJExpandableTableTree-dummy.m in Sources */,
-				ABC0BC736AF0B4F9FD1506392AC88A8F /* ReplaceMe.swift in Sources */,
+				4966DBCD1CB529D68CB74B875E09027F /* KJExpandableTableTree-dummy.m in Sources */,
+				15632BB91EC440A686A53EE6BE6B3CFF /* KJTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +422,7 @@
 		};
 		43C353634E0B7DF63C8BD79F5FB6B00D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8FBCCC94A9EDE6ECAF6BE53E106055B /* KJExpandableTableTree.xcconfig */;
+			baseConfigurationReference = CCA4A046D4EB2BB12370C2CB7062BEB8 /* KJExpandableTableTree.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -536,7 +536,7 @@
 		};
 		893CF548E1F8AC6D0C0B6349B85A2D02 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8FBCCC94A9EDE6ECAF6BE53E106055B /* KJExpandableTableTree.xcconfig */;
+			baseConfigurationReference = CCA4A046D4EB2BB12370C2CB7062BEB8 /* KJExpandableTableTree.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

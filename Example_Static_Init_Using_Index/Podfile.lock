@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KJExpandableTableTree: e4fef74e14cb171bcb404db86a2eaf5b5bdc6171
+  KJExpandableTableTree: 107d2ed5ec2e18abad9060507aa3a0fe5aa4c7b2
 
 PODFILE CHECKSUM: 0fc9bec4e0eeca266961c79ec487a746bccc2876
 

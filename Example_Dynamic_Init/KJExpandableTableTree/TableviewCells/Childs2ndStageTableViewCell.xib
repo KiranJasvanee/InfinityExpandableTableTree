@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="Childs2ndStageTableViewCell" customModule="KJExpandableTableTree_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2nd" translatesAutoresizingMaskIntoConstraints="NO" id="HCk-u7-n4R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Cell at Index" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMq-km-T3o">
+                        <rect key="frame" x="36" y="8" width="138" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsH-HZ-Qem">
+                        <rect key="frame" x="292" y="13" width="12" height="22"/>
+                        <state key="normal" image="plus"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sMq-km-T3o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1mn-Jw-96U"/>
+                    <constraint firstItem="HCk-u7-n4R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="262-Rp-gCd"/>
+                    <constraint firstAttribute="trailing" secondItem="HCk-u7-n4R" secondAttribute="trailing" id="30B-X0-0Cf"/>
+                    <constraint firstItem="UsH-HZ-Qem" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="A41-A9-54s"/>
+                    <constraint firstAttribute="trailing" secondItem="UsH-HZ-Qem" secondAttribute="trailing" constant="16" id="Hi5-q7-TR6"/>
+                    <constraint firstItem="HCk-u7-n4R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LOH-nJ-m4l"/>
+                    <constraint firstItem="sMq-km-T3o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="36" id="emh-2z-VSp"/>
+                    <constraint firstAttribute="bottom" secondItem="sMq-km-T3o" secondAttribute="bottom" constant="8" id="uqs-8A-0sn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buttonState" destination="UsH-HZ-Qem" id="JPj-oY-Flk"/>
+                <outlet property="imageviewBackground" destination="HCk-u7-n4R" id="37E-VF-4HZ"/>
+                <outlet property="labelChildAtIndex" destination="sMq-km-T3o" id="vSz-1Z-ogn"/>
+            </connections>
+            <point key="canvasLocation" x="-1173" y="-18"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="2nd" width="100" height="56"/>
+        <image name="plus" width="12" height="12"/>
+    </resources>
+</document>
