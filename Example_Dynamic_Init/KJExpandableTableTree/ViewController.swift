@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  KJExpandableTableTree
 //
-//  Created by bluelabeldeveloper1 on 05/12/2017.
-//  Copyright (c) 2017 bluelabeldeveloper1. All rights reserved.
+//  Created by KiranJasvanee on 05/12/2017.
+//  Copyright (c) 2017 KiranJasvanee. All rights reserved.
 //
 
 import UIKit
