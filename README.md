@@ -20,7 +20,7 @@ KJExpandableTableTree is available through [CocoaPods](http://cocoapods.org). To
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'KJExpandableTableTree', '~> 1.0.0'
+pod 'KJExpandableTableTree'
 ```
 
 ## Initialization
