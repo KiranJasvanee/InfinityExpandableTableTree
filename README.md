@@ -14,7 +14,16 @@ Expand cells in `TableView` up to ∞-1. You can use any `Custom Cell` for any `
 
 **NOTE: In below presentation, if animation looks laggy, wait till page completes it loading. It's smooth as tap**
 
-### There are 3 ways to initialize this library. You can choose any either way to create tree. Static/Dynamic.
+## Installation
+
+KJExpandableTableTree is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'KJExpandableTableTree', '~> 0.1.0'
+```
+
+### There are 3 ways to initialize this library.  <br /> You can choose any either way to create tree. Static/Dynamic.
 
 #### 1 - A static tree - initialization.
 ```swift 
@@ -191,6 +200,18 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         tableviewcell?.backgroundColor = UIColor.yellow
         tableviewcell?.selectionStyle = .none
         return tableviewcell!
+}
+```
+
+You will receive `node`, same as `cellForRowAt`, by calling function `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> KJExpandableTableTree.Node`. <br />
+Use `node` instance and it's `index`/`givenIndex` to verify specific cell press, to do additional task in your tableview's `didSelectRowAt`.
+
+```swift
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let node = kjtreeInstance.tableView(tableView, didSelectRowAt: indexPath)
+        print(node.index)
+        // if you've added any identifier or used indexing format
+        print(node.givenIndex)
 }
 ```
 
