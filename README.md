@@ -14,7 +14,18 @@ Expand cells in `TableView` up to ∞-1. You can use any `Custom Cell` for any `
 
 **NOTE: In below presentation, if animation looks laggy, wait till page completes it loading. It's smooth as tap**
 
-### There are 3 ways to initialize this library. You can choose any either way to create tree. Static/Dynamic.
+## Installation
+
+KJExpandableTableTree is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'KJExpandableTableTree'
+```
+
+## Initialization
+
+#### There are *`3 ways`* to initialize this library.  <br /> You can choose any either way to create tree. Static/Dynamic.
 
 #### 1 - A static tree - initialization.
 ```swift 
@@ -148,18 +159,22 @@ override func viewDidLoad() {
 }
 ```
 ![KJExpandableTableTree](Gifs/dynamic.gif)
+<br />
+<br />
 
-### Implementation
+## Implementation
 
-Return number of cells at `numberOfRowsInSection` using function `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> NSInteger`
+Return number of cells at `TableView's numberOfRowsInSection` using KJTree library function `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> NSInteger`
 
 ```swift
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return kjtreeInstance.tableView(tableView, numberOfRowsInSection: section)
     }
 ```
+<br />
+<br />
 
-in `cellForRowAt`, you will receive `node` using function `func cellIdentifierUsingTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> Node`. <br />
+in `cellForRowAt`, you will receive `Node` instance using KJTree library function `func cellIdentifierUsingTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> Node`. <br />
 Use `node.index` to get index of each cell to be shown in tableview. <br />
 For parents you will receive `0,1,2,...` for childs `0.0, 0.1, 0.2, 1.0, 1.1,....` for sub childs `0.0.0, 0.0.1, 0.1.0, 1.0.0, 1.1.1, ....` and so one for sub childs of sub childs you will receive `4 index separated by . (dot)` <br /> <br />
 **NOTE:** You can return custom cells based on your needs, I've enclosed 3 examples to show you guys how you can return cells for different purpose. <br />
@@ -191,6 +206,20 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         tableviewcell?.backgroundColor = UIColor.yellow
         tableviewcell?.selectionStyle = .none
         return tableviewcell!
+}
+```
+<br />
+<br />
+
+You will receive `Node` instance, same as `cellForRowAt`, by calling function `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> KJExpandableTableTree.Node`. <br />
+Use `node` instance and it's `index`/`givenIndex` to verify specific cell press, to do additional task in your tableview's `didSelectRowAt`.
+
+```swift
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let node = kjtreeInstance.tableView(tableView, didSelectRowAt: indexPath)
+        print(node.index)
+        // if you've added any identifier or used indexing format
+        print(node.givenIndex)
 }
 ```
 
