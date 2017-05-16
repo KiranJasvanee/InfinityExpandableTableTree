@@ -50,8 +50,8 @@ Expand cells in `TableView` up to ∞-1. You can use any `Custom Cell` for any `
 - [x] Static Initialization
 - [x] Static Initialization using Index
 - [x] Dynamic Initialization using JSON
-- [x] Custom Cell
-- [x] Control of Cell press for additional task.
+- [x] Custom Cell 
+- [x] Control of Cells
 - [x] Fast scrolling, memory efficient
 
 ## Installation
@@ -206,7 +206,7 @@ override func viewDidLoad() {
 
 ## Methods
 
-Use `UITableView` delegates as you guys are using, simply call library `Methods` from your delegates.
+Use `UITableView` delegates, as you guys are using, simply call library `Methods` from your delegates.
 
 ###### numberOfRowsInSection
 Call `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> NSInteger` to return number of cells.
