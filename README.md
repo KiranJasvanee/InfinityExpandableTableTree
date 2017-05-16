@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://twitter.com/Kiranjasvanee">
-        <img src="(https://img.shields.io/badge/contact-@kiranjasvanee-blue.svg?style=flat"
+        <img src="https://img.shields.io/badge/contact-@kiranjasvanee-blue.svg?style=flat"
              alt="Twitter">
     </a>
     <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/blob/master/LICENSE">
@@ -41,13 +41,6 @@
 </p>
 
 ----------------
-
-[![Twitter: @KiranJasvanee](https://img.shields.io/badge/contact-@kiranjasvanee-blue.svg?style=flat)](https://twitter.com/Kiranjasvanee)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/KiranJasvanee/KJExpandableTableTree/blob/master/LICENSE)
-[![Issues](https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree/issues)
-[![Forks](https://img.shields.io/github/forks/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
-[![Stars](https://img.shields.io/github/stars/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
-[![Language](https://img.shields.io/badge/Language-Swift-yellow.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
 
 
 ## Preview
