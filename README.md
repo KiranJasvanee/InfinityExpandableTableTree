@@ -1,4 +1,46 @@
-# KJExpandableTableTree
+<p align="center">
+  <img src="Resources/LogoDark.png"  style="width: 400px;" width="400" />
+</p>
+
+<p align="center">
+    <a href="https://twitter.com/Kiranjasvanee">
+        <img src="(https://img.shields.io/badge/contact-@kiranjasvanee-blue.svg?style=flat"
+             alt="Twitter">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="Codecov" />
+    </a>
+    <a href="https://cocoapods.org/pods/KJExpandableTableTree">
+        <img src="https://img.shields.io/cocoapods/v/KJExpandableTableTree.svg?style=flat"
+             alt="Pods Version">
+    </a>
+    <a href="http://cocoapods.org/pods/KJExpandableTableTree/">
+        <img src="https://img.shields.io/cocoapods/p/KJExpandableTableTree.svg?style=flat"
+             alt="Platforms">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/issues">
+        <img src="https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg"
+             alt="Issues">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/issues">
+        <img src="https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg"
+             alt="Issues">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree">
+        <img src="https://img.shields.io/github/forks/KiranJasvanee/KJExpandableTableTree.svg"
+             alt="Forks">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree">
+        <img src="https://img.shields.io/github/stars/KiranJasvanee/KJExpandableTableTree.svg"
+             alt="Stars">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree">
+        <img src="https://img.shields.io/badge/Language-Swift-yellow.svg"
+             alt="Stars">
+    </a>
+</p>
+
+----------------
 
 [![Twitter: @KiranJasvanee](https://img.shields.io/badge/contact-@kiranjasvanee-blue.svg?style=flat)](https://twitter.com/Kiranjasvanee)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/KiranJasvanee/KJExpandableTableTree/blob/master/LICENSE)
@@ -7,7 +49,6 @@
 [![Stars](https://img.shields.io/github/stars/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
 [![Language](https://img.shields.io/badge/Language-Swift-yellow.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
 
-**NOTE: Pod version requires 1.2.0 & later**
 
 ## Preview
 Expand cells in `TableView` up to ∞-1. You can use any `Custom Cell` for any `Parent`, `Childs` or their `Subchilds`    <br />   <br />
