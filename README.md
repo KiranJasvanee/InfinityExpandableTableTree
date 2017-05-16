@@ -1,18 +1,58 @@
-# KJExpandableTableTree
+<p align="center">
+  <img src="Resources/LogoDark.png"  style="width: 400px;" width="400" />
+</p>
 
-[![Twitter: @KiranJasvanee](https://img.shields.io/badge/contact-@kiranjasvanee-blue.svg?style=flat)](https://twitter.com/Kiranjasvanee)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/KiranJasvanee/KJExpandableTableTree/blob/master/LICENSE)
-[![Issues](https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree/issues)
-[![Forks](https://img.shields.io/github/forks/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
-[![Stars](https://img.shields.io/github/stars/KiranJasvanee/KJExpandableTableTree.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
-[![Language](https://img.shields.io/badge/Language-Swift-yellow.svg)](https://github.com/KiranJasvanee/KJExpandableTableTree)
+<p align="center">
+    <a href="https://twitter.com/Kiranjasvanee">
+        <img src="https://img.shields.io/badge/contact-@kiranjasvanee-blue.svg?style=flat"
+             alt="Twitter">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="Codecov" />
+    </a>
+    <a href="https://cocoapods.org/pods/KJExpandableTableTree">
+        <img src="https://img.shields.io/cocoapods/v/KJExpandableTableTree.svg?style=flat"
+             alt="Pods Version">
+    </a>
+    <a href="http://cocoapods.org/pods/KJExpandableTableTree/">
+        <img src="https://img.shields.io/cocoapods/p/KJExpandableTableTree.svg?style=flat"
+             alt="Platforms">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/issues">
+        <img src="https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg"
+             alt="Issues">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/issues">
+        <img src="https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg"
+             alt="Issues">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree">
+        <img src="https://img.shields.io/github/forks/KiranJasvanee/KJExpandableTableTree.svg"
+             alt="Forks">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree">
+        <img src="https://img.shields.io/github/stars/KiranJasvanee/KJExpandableTableTree.svg"
+             alt="Stars">
+    </a>
+    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree">
+        <img src="https://img.shields.io/badge/Language-Swift-yellow.svg"
+             alt="Stars">
+    </a>
+</p>
 
-**NOTE: Pod version requires 1.2.0 & later**
+----------------
+
 
 ## Preview
 Expand cells in `TableView` up to ∞-1. You can use any `Custom Cell` for any `Parent`, `Childs` or their `Subchilds`    <br />   <br />
 
-**NOTE: In below presentation, if animation looks laggy, wait till page completes it loading. It's smooth as tap**
+## Features
+- [x] Static Initialization
+- [x] Static Initialization using Index
+- [x] Dynamic Initialization using JSON
+- [x] Custom Cell 
+- [x] Control of Cells
+- [x] Fast scrolling, memory efficient
 
 ## Installation
 
@@ -23,11 +63,12 @@ it, simply add the following line to your Podfile:
 pod 'KJExpandableTableTree'
 ```
 
-## Initialization
+## Getting Started
 
-#### There are *`3 ways`* to initialize this library.  <br /> You can choose any either way to create tree. Static/Dynamic.
+There are ***`3 ways`*** to initialize this library.  <br /> You can choose any either way to create tree. Static/Dynamic.
 
-#### 1 - A static tree - initialization.
+#### 1 - Static Tree Initialization.
+[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Static_Init) folder.
 ```swift 
 // KJ Tree instances -------------------------
 var arrayTree:[Parent] = []
@@ -59,13 +100,13 @@ override func viewDidLoad() {
         kjtreeInstance = KJTree(Parents: arrayTree)
 }
 ```
-As you can see below, I've added 2 more parents for my demo simulation. Check out my example `Example_Static_Init` for this.
+I've added 2 more parents for my demo simulation
 
 ![KJExpandableTableTree](Gifs/static.gif)
 
-#### 2 - A static tree, using Custom Indexing - initialization.
+#### 2 - Static Tree Index Initialization.
 
-Check out my example `Example_Static_Init_Using_Index` for this.
+[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Static_Init_Using_Index) folder.
 
 ```swift 
 // KJ Tree instances -------------------------
@@ -99,8 +140,9 @@ override func viewDidLoad() {
 
 #### 3 - Dynamic tree, using JSON - initialization.
 
-Check out my example `Example_Static_Init_Using_Index` for this. I've used `Tree.json` file for `JSON Array`.
-Initialize `KJTree` with `JSON` similar to below, Provide required Key's name and YOUR ARE DONE.
+[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Dynamic_Init) folder. <br />
+I've used `Tree.json` file for `JSON Array`. <br />
+Initialize `KJTree` with `JSON array of Parents` similar to below, Provide required Key's name and *YOUR ARE DONE*. <br />
 
 ```swift
 {
@@ -162,9 +204,12 @@ override func viewDidLoad() {
 <br />
 <br />
 
-## Implementation
+## Methods
 
-Return number of cells at `TableView's numberOfRowsInSection` using KJTree library function `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> NSInteger`
+Use `UITableView` delegates, as you guys are using, simply call library `Methods` from your delegates.
+
+###### numberOfRowsInSection
+Call `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> NSInteger` to return number of cells.
 
 ```swift
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -174,7 +219,8 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 <br />
 <br />
 
-in `cellForRowAt`, you will receive `Node` instance using KJTree library function `func cellIdentifierUsingTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> Node`. <br />
+###### cellIdentifierUsingTableView
+Call `cellIdentifierUsingTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> Node` to receive `Node` instance. <br />
 Use `node.index` to get index of each cell to be shown in tableview. <br />
 For parents you will receive `0,1,2,...` for childs `0.0, 0.1, 0.2, 1.0, 1.1,....` for sub childs `0.0.0, 0.0.1, 0.1.0, 1.0.0, 1.1.1, ....` and so one for sub childs of sub childs you will receive `4 index separated by . (dot)` <br /> <br />
 **NOTE:** You can return custom cells based on your needs, I've enclosed 3 examples to show you guys how you can return cells for different purpose. <br />
@@ -211,7 +257,8 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 <br />
 <br />
 
-You will receive `Node` instance, same as `cellForRowAt`, by calling function `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> KJExpandableTableTree.Node`. <br />
+###### didSelectRowAt
+Call `tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> KJExpandableTableTree.Node` to receive `Node` instance. <br />
 Use `node` instance and it's `index`/`givenIndex` to verify specific cell press, to do additional task in your tableview's `didSelectRowAt`.
 
 ```swift
