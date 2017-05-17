@@ -22,10 +22,6 @@
         <img src="https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg"
              alt="Issues">
     </a>
-    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/issues">
-        <img src="https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg"
-             alt="Issues">
-    </a>
     <a href="https://github.com/KiranJasvanee/KJExpandableTableTree">
         <img src="https://img.shields.io/github/forks/KiranJasvanee/KJExpandableTableTree.svg"
              alt="Forks">
