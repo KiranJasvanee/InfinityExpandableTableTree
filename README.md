@@ -46,7 +46,7 @@
 ## Preview
 Expand cells in `TableView` up to ***∞-1***. You can use any `Custom Cell` for any `Parent`, `Childs` or their `Subchilds`    <br />   <br />
 
-<img src="Gifs/preview_portrait.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
+<img src="Gifs/colorfull.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 <img src="Gifs/preview_portrait_custom.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 <img src="Gifs/preview_landscape.gif" style="width: 350px; border: 1px 1px 0 0 #888995 solid;" width="350"></img>
 
@@ -107,7 +107,7 @@ override func viewDidLoad() {
 ```
 I've added 2 more parents for my demo simulation
 
-<img src="Gifs/static.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
+<img src="Gifs/colorfull.gif.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 
 #### 2 - Static Tree Index Initialization.
 
