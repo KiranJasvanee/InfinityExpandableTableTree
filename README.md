@@ -87,12 +87,16 @@ override func viewDidLoad() {
         // I've provided a block of each parent and child, use this block to return no of childs [Child] inside parent/child.
         // this will provide you a robust visibility of static tree.
         let parent1 = Parent() { () -> [Child] in
+            
             let child1 = Child()
             let child2 = Child(subChilds: { () -> [Child] in
                 let subchild1 = Child()
                 let subchild2 = Child(subChilds: { () -> [Child] in
                     let subchild1 = Child()
-                    let subchild2 = Child()
+                    let subchild2 = Child(subChilds: { () -> [Child] in
+                        let subchild1 = Child()
+                        return [subchild1]
+                    })
                     return [subchild1, subchild2]
                 })
                 return [subchild1, subchild2]
@@ -107,7 +111,7 @@ override func viewDidLoad() {
 ```
 I've added 2 more parents for my demo simulation
 
-<img src="Gifs/colorfull.gif.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
+<img src="Gifs/colorfull.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 
 #### 2 - Static Tree Index Initialization.
 
