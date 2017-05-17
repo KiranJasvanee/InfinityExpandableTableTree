@@ -10,6 +10,8 @@ import UIKit
 
 class Childs3rdStageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageviewBackground: UIImageView!
+    @IBOutlet weak var constraintLabelTitle: NSLayoutConstraint!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelSubTitle: UILabel!
     @IBOutlet weak var labelIndex: UILabel!
@@ -22,9 +24,20 @@ class Childs3rdStageTableViewCell: UITableViewCell {
         labelTitle.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
         labelSubTitle.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
         labelIndex.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        
+        imageviewBackground.layer.cornerRadius = 2.0
+        imageviewBackground.layer.masksToBounds = true
     }
 
-    func cellFillUp(indexParam: String) {
+    func cellFillUp(indexParam: String, tupleCount: NSInteger) {
+        
+        if tupleCount == 5 {
+            imageviewBackground.backgroundColor = UIColor(red: 11.0/255.0, green: 186/255.0, blue: 255.0/255.0, alpha: 1.0)
+            constraintLabelTitle.constant = 94
+        }else{
+            imageviewBackground.backgroundColor = UIColor(red: 255.0/255.0, green: 105.0/255.0, blue: 105.0/255.0, alpha: 1.0)
+            constraintLabelTitle.constant = 56
+        }
         labelTitle.textColor = UIColor.white
         labelSubTitle.textColor = UIColor.white
         labelIndex.textColor = UIColor.white

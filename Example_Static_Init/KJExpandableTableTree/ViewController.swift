@@ -30,7 +30,10 @@ class ViewController: UIViewController {
                 let subchild1 = Child()
                 let subchild2 = Child(subChilds: { () -> [Child] in
                     let subchild1 = Child()
-                    let subchild2 = Child()
+                    let subchild2 = Child(subChilds: { () -> [Child] in
+                        let subchild1 = Child()
+                        return [subchild1]
+                    })
                     return [subchild1, subchild2]
                 })
                 return [subchild1, subchild2]
@@ -138,7 +141,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
             return cellChild!
             
-        }else if indexTuples.count == 3{
+        }else if indexTuples.count == 3 || indexTuples.count == 5 {
             
             // Parents
             let cellIdentifierChilds = "Childs3rdStageTableViewCellIdentity"
@@ -147,7 +150,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 tableView.register(UINib(nibName: "Childs3rdStageTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifierChilds)
                 cellChild = tableView.dequeueReusableCell(withIdentifier: cellIdentifierChilds) as? Childs3rdStageTableViewCell
             }
-            cellChild?.cellFillUp(indexParam: node.index)
+            cellChild?.cellFillUp(indexParam: node.index, tupleCount: indexTuples.count)
             cellChild?.selectionStyle = .none
             
             if node.state == .open {

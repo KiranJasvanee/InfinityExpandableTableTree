@@ -19,6 +19,9 @@ class Childs2ndStageTableViewCell: UITableViewCell {
         // Initialization code
         
         labelChildAtIndex.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        
+        imageviewBackground.layer.cornerRadius = 2.0
+        imageviewBackground.layer.masksToBounds = true
     }
     
     func cellFillUp(indexParam: String) {

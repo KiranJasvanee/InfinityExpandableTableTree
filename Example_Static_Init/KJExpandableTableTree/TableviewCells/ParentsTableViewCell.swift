@@ -22,16 +22,19 @@ class ParentsTableViewCell: UITableViewCell {
         // Initialization code
         labelParentCell.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
         labelIndex.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        
+        imageviewBackground.layer.cornerRadius = 2.0
+        imageviewBackground.layer.masksToBounds = true
     }
     
     func cellFillUp(indexParam: String, tupleCount: NSInteger) {
         if tupleCount == 1 {
             labelParentCell.text = "Parent custom cell"
-            imageviewBackground.image = UIImage(named: "1st")
+            imageviewBackground.backgroundColor = UIColor(red: 45.0/255.0, green: 138.0/255.0, blue: 139.0/255.0, alpha: 1.0)
             constraintLeadingLabelParent.constant = 16
         }else{
             labelParentCell.text = "Child custom cell"
-            imageviewBackground.image = nil
+            imageviewBackground.backgroundColor = UIColor(red: 217.0/255.0, green: 127.0/255.0, blue: 37.0/255.0, alpha: 1.0)
             constraintLeadingLabelParent.constant = 78
         }
         labelParentCell.textColor = UIColor.white
