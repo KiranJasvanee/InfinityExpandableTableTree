@@ -44,7 +44,11 @@
 
 
 ## Preview
-Expand cells in `TableView` up to ∞-1. You can use any `Custom Cell` for any `Parent`, `Childs` or their `Subchilds`    <br />   <br />
+Expand cells in `TableView` up to ***∞-1***. You can use any `Custom Cell` for any `Parent`, `Childs` or their `Subchilds`    <br />   <br />
+
+<img src="Gifs/preview_portrait.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
+<img src="Gifs/preview_portrait_custom.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
+<img src="Gifs/preview_landscape.gif" style="width: 350px; border: 1px 1px 0 0 #888995 solid;" width="350"></img>
 
 ## Features
 - [x] Static Initialization
@@ -53,6 +57,7 @@ Expand cells in `TableView` up to ∞-1. You can use any `Custom Cell` for any `
 - [x] Custom Cell 
 - [x] Control of Cells
 - [x] Fast scrolling, memory efficient
+- [x] Well unit tested
 
 ## Installation
 
@@ -102,7 +107,7 @@ override func viewDidLoad() {
 ```
 I've added 2 more parents for my demo simulation
 
-![KJExpandableTableTree](Gifs/static.gif)
+<img src="Gifs/static.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 
 #### 2 - Static Tree Index Initialization.
 
@@ -136,7 +141,7 @@ override func viewDidLoad() {
         )
 }
 ```
-![KJExpandableTableTree](Gifs/staticIndexing.gif)
+<img src="Gifs/staticIndexing.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 
 #### 3 - Dynamic tree, using JSON - initialization.
 
@@ -200,7 +205,7 @@ override func viewDidLoad() {
         }
 }
 ```
-![KJExpandableTableTree](Gifs/dynamic.gif)
+<img src="Gifs/dynamic.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 <br />
 <br />
 
