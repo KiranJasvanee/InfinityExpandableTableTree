@@ -526,6 +526,7 @@ public class Node {
     public init(indexParam: String, idParam: String, givenIndexParam: String) {
         index = indexParam
         id = idParam
+        keyIdentity = idParam
         givenIndex = givenIndexParam
     }
 }

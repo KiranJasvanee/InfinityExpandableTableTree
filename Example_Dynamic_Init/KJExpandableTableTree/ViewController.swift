@@ -158,6 +158,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let node = kjtreeInstance.tableView(tableView, didSelectRowAt: indexPath)
         print(node.index)
+        print(node.keyIdentity)
         // if you've added any identifier or used indexing format
         print(node.givenIndex)
     }
