@@ -70,7 +70,7 @@ There are ***`3 ways`*** to initialize this library.  <br /> You can choose any 
 
 #### 1 - Dynamic tree, using JSON - initialization.
 
-[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Dynamic_Init) folder. <br />
+[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Dynamic_Init) folder. 
 I've used `Tree.json` file for `JSON Array`. <br />
 
 ```swift
