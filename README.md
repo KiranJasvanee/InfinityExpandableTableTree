@@ -22,10 +22,6 @@
         <img src="https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg"
              alt="Issues">
     </a>
-    <a href="https://github.com/KiranJasvanee/KJExpandableTableTree/issues">
-        <img src="https://img.shields.io/github/issues/KiranJasvanee/KJExpandableTableTree.svg"
-             alt="Issues">
-    </a>
     <a href="https://github.com/KiranJasvanee/KJExpandableTableTree">
         <img src="https://img.shields.io/github/forks/KiranJasvanee/KJExpandableTableTree.svg"
              alt="Forks">
@@ -46,7 +42,7 @@
 ## Preview
 Expand cells in `TableView` up to ***∞-1***. You can use any `Custom Cell` for any `Parent`, `Childs` or their `Subchilds`    <br />   <br />
 
-<img src="Gifs/preview_portrait.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
+<img src="Gifs/colorfull.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 <img src="Gifs/preview_portrait_custom.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 <img src="Gifs/preview_landscape.gif" style="width: 350px; border: 1px 1px 0 0 #888995 solid;" width="350"></img>
 
@@ -72,82 +68,10 @@ pod 'KJExpandableTableTree'
 
 There are ***`3 ways`*** to initialize this library.  <br /> You can choose any either way to create tree. Static/Dynamic.
 
-#### 1 - Static Tree Initialization.
-[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Static_Init) folder.
-```swift 
-// KJ Tree instances -------------------------
-var arrayTree:[Parent] = []
-var kjtreeInstance: KJTree = KJTree()
-    
-override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // You can easily identify here, I've one parent called parent1, 3 childs inside it, 2 sub childs inside 2nd child, and 2 more sub childs inside 2nd sub child.
-        // You can add as many as internal level of childs hierarchy.
-        // I've provided a block of each parent and child, use this block to return no of childs [Child] inside parent/child.
-        // this will provide you a robust visibility of static tree.
-        let parent1 = Parent() { () -> [Child] in
-            let child1 = Child()
-            let child2 = Child(subChilds: { () -> [Child] in
-                let subchild1 = Child()
-                let subchild2 = Child(subChilds: { () -> [Child] in
-                    let subchild1 = Child()
-                    let subchild2 = Child()
-                    return [subchild1, subchild2]
-                })
-                return [subchild1, subchild2]
-            })
-            let child3 = Child()
-            
-            return [child1, child2, child3]
-        }
-        arrayTree.append(parent1)
-        kjtreeInstance = KJTree(Parents: arrayTree)
-}
-```
-I've added 2 more parents for my demo simulation
+#### 1 - Dynamic tree, using JSON - initialization.
 
-<img src="Gifs/static.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
-
-#### 2 - Static Tree Index Initialization.
-
-[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Static_Init_Using_Index) folder.
-
-```swift 
-// KJ Tree instances -------------------------
-var arrayTree:[Parent] = []
-var kjtreeInstance: KJTree = KJTree()
-
-override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // You can easily create tree by Indexing.
-        // below, There will be 3 parents -
-        // 1.1 indicates 1 child inside 1st parent.
-        // in Second, 2nd parent have 1 child (2.1....), That 1 child have 3 subchilds (2.1.1..., 2.1.2..., 2.1.3...), now it's easy to understand 2.1.3.2 and 2.1.3.3 means 2 sub childs inside 2.1.3.
-        // in Third, 3rd parent have 3 childs. 1, 2, 3.
-        kjtreeInstance = KJTree(indices:
-            ["1.1",
-             
-             "2.1.1",
-             "2.1.2.1",
-             "2.1.3.2",
-             "2.1.3.3",
-             
-             
-             "3.1",
-             "3.2",
-             "3.3"]
-        )
-}
-```
-<img src="Gifs/staticIndexing.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
-
-#### 3 - Dynamic tree, using JSON - initialization.
-
-[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Dynamic_Init) folder. <br />
+[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Dynamic_Init) folder. 
 I've used `Tree.json` file for `JSON Array`. <br />
-Initialize `KJTree` with `JSON array of Parents` similar to below, Provide required Key's name and *YOUR ARE DONE*. <br />
 
 ```swift
 {
@@ -185,29 +109,98 @@ Initialize `KJTree` with `JSON array of Parents` similar to below, Provide requi
         }
 }
 ```
+Initialize `KJTree` with `JSON array of Parents` similar to below, Provide required Key's name and *YOUR ARE DONE*. <br />
 ```swift
 // KJ Tree instances -------------------------
-var arrayTree:[Parent] = []
-var kjtreeInstance: KJTree = KJTree()
+var kjtreeInstance: KJTree? = nil
 
-override func viewDidLoad() {
-        super.viewDidLoad()
+var arrayParents: NSArray?
+if let treeDictionary = jsonDictionary?.object(forKey: "Tree") as? NSDictionary {
+    if let arrayOfParents = treeDictionary.object(forKey: "Parents") as? NSArray {
+      arrayParents = arrayOfParents
+    }
+}
         
-        var arrayParents: NSArray?
-        if let treeDictionary = jsonDictionary?.object(forKey: "Tree") as? NSDictionary {
-            if let arrayOfParents = treeDictionary.object(forKey: "Parents") as? NSArray {
-                arrayParents = arrayOfParents
-            }
-        }
-        
-        if let arrayOfParents = arrayParents {
-            kjtreeInstance = KJTree(parents: arrayOfParents, childrenKey: "Children", idKey: "Id")
-        }
+if let arrayOfParents = arrayParents {
+  kjtreeInstance = KJTree(parents: arrayOfParents, childrenKey: "Children", idKey: "Id")
 }
 ```
 <img src="Gifs/dynamic.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
 <br />
 <br />
+
+#### 2 - Static Tree Index Initialization.
+
+[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Static_Init_Using_Index) folder.
+
+```swift 
+// KJ Tree instances -------------------------
+// You can easily create tree by Indexing.
+// below, There will be 3 parents -
+// 1.1 indicates 1 child inside 1st parent.
+// in Second, 2nd parent have 1 child (2.1....), That 1 child have 3 subchilds (2.1.1..., 2.1.2..., 2.1.3...), now it's easy to understand 2.1.3.2 and 2.1.3.3 means 2 sub childs inside 2.1.3.
+// in Third, 3rd parent have 3 childs. 1, 2, 3.
+kjtreeInstance = KJTree(indices:
+            ["1.1",
+             
+             "2.1.1",
+             "2.1.2.1",
+             "2.1.3.2",
+             "2.1.3.3",
+             
+             
+             "3.1",
+             "3.2",
+             "3.3"]
+            )
+```
+<img src="Gifs/staticIndexing.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
+
+#### 3 - Static Tree Initialization.
+[`Example`](https://github.com/KiranJasvanee/KJExpandableTableTree/tree/master/Example_Static_Init) folder.
+*Swifty* robust way to initialize this library
+```swift 
+// KJ Tree instances -------------------------
+var arrayTree:[Parent] = []
+var kjtreeInstance: KJTree = KJTree()
+    
+override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // You can easily identify here, I've one parent called parent1, 3 childs inside it, 2 sub childs inside 2nd child, and 2 more sub childs inside 2nd sub child.
+        // You can add as many as internal level of childs hierarchy.
+        // I've provided a block of each parent and child, use this block to return no of childs [Child] inside parent/child.
+        // this will provide you a robust visibility of static tree.
+        let parent1 = Parent() { () -> [Child] in
+            
+            let child1 = Child()
+            let child2 = Child(subChilds: { () -> [Child] in
+                let subchild1 = Child()
+                let subchild2 = Child(subChilds: { () -> [Child] in
+                    let subchild1 = Child()
+                    let subchild2 = Child(subChilds: { () -> [Child] in
+                        let subchild1 = Child()
+                        return [subchild1]
+                    })
+                    return [subchild1, subchild2]
+                })
+                return [subchild1, subchild2]
+            })
+            let child3 = Child()
+            
+            return [child1, child2, child3]
+        }
+        arrayTree.append(parent1)
+        kjtreeInstance = KJTree(Parents: arrayTree)
+}
+```
+I've added 2 more parents for my demo simulation
+
+<img src="Gifs/colorfull.gif" style="width: 250px; border: 1px 1px 0 0 #888995 solid;" width="250"></img>
+
+
+
+
 
 ## Methods
 
