@@ -506,7 +506,7 @@ public class Node {
     fileprivate var arrayChilds: [Child] = []
     
     // identity key
-    fileprivate var keyIdentity: String = ""
+    public var keyIdentity: String = ""
     
     // Private instances
     fileprivate var isVisibility = false    // This will visible or invisible no of rows based on selection.
@@ -537,12 +537,16 @@ public class Parent: Node{
     }
     public init(childs: () -> [Child]) {
         super.init()
-        
         arrayChilds = childs()
         // print(arrayChilds)
     }
+    public init(key: String){
+        super.init()
+        keyIdentity = key
+    }
     public init(key: String ,childs: () -> [Child]) {
         super.init()
+        keyIdentity = key
         arrayChilds = childs()
         // print(arrayChilds)
     }
@@ -557,8 +561,13 @@ public class Child: Node{
         arrayChilds = subChilds()
         // print(arrayChilds)
     }
+    public init(key: String){
+        super.init()
+        keyIdentity = key
+    }
     public init(key: String, subChilds: () -> [Child]) {
         super.init()
+        keyIdentity = key
         arrayChilds = subChilds()
         // print(arrayChilds)
     }

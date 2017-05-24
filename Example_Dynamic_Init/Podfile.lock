@@ -1,5 +1,5 @@
 PODS:
-  - KJExpandableTableTree (0.1.0)
+  - KJExpandableTableTree (1.0.0)
 
 DEPENDENCIES:
   - KJExpandableTableTree (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KJExpandableTableTree: 107d2ed5ec2e18abad9060507aa3a0fe5aa4c7b2
+  KJExpandableTableTree: 0a499d4e55ad1cf9c3f302881ac1782f248a5c4b
 
 PODFILE CHECKSUM: 0fc9bec4e0eeca266961c79ec487a746bccc2876
 
