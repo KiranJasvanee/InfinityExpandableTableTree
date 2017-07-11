@@ -35,7 +35,7 @@ class ViewController: UIViewController {
              "3.2",
              "3.3"]
         )
-        
+        kjtreeInstance.isInitiallyExpanded = true
         
         tableview.dataSource = self
         tableview.delegate = self

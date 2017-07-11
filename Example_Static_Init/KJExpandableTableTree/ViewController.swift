@@ -22,15 +22,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        let parent1 = Parent() { () -> [Child] in
+        let parent1 = Parent(expanded: true) { () -> [Child] in
             
             let child1 = Child()
-            let child2 = Child(subChilds: { () -> [Child] in
+            let child2 = Child(expanded: true, subChilds: { () -> [Child] in
                 let subchild1 = Child()
                 let subchild2 = Child(subChilds: { () -> [Child] in
                     let subchild1 = Child()
-                    let subchild2 = Child(subChilds: { () -> [Child] in
-                        let subchild1 = Child()
+                    let subchild2 = Child(expanded: true, subChilds: { () -> [Child] in
+                        let subchild1 = Child(expanded: true, subChilds: { () -> [Child] in
+                            let subchild1 = Child(expanded: true, subChilds: { () -> [Child] in
+                                let subchild1 = Child()
+                                return [subchild1]
+                            })
+                            return [subchild1]
+                        })
                         return [subchild1]
                     })
                     return [subchild1, subchild2]
@@ -64,7 +70,7 @@ class ViewController: UIViewController {
         arrayTree.append(parent2)
         arrayTree.append(parent3)
         kjtreeInstance = KJTree(Parents: arrayTree)
-        
+        kjtreeInstance.isInitiallyExpanded = true
         
         tableview.dataSource = self
         tableview.delegate = self
@@ -140,7 +146,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
             return cellChild!
             
-        }else if indexTuples.count == 3{
+        }else if indexTuples.count == 3 || indexTuples.count == 5 || indexTuples.count == 6 || indexTuples.count == 7{
             
             // Parents
             let cellIdentifierChilds = "Childs3rdStageTableViewCellIdentity"
@@ -170,7 +176,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 tableviewcell = UITableViewCell(style: .default, reuseIdentifier: "cellidentity")
             }
             
-            tableviewcell?.backgroundColor = UIColor.yellow
+            tableviewcell?.backgroundColor = UIColor.lightGray
+            tableviewcell?.textLabel?.text = node.index
             tableviewcell?.selectionStyle = .none
             return tableviewcell!
         }
@@ -178,7 +185,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let node = kjtreeInstance.tableView(tableView, didSelectRowAt: indexPath)
         print(node.index)
-        print(node.keyIdentity)
+        print(node.key)
         // if you've added any identifier or used indexing format
         print(node.givenIndex)
     }

@@ -46,8 +46,11 @@ class ViewController: UIViewController {
         }
         
         if let arrayOfParents = arrayParents {
-            kjtreeInstance = KJTree(parents: arrayOfParents, childrenKey: "Children", idKey: "Id")
+            kjtreeInstance = KJTree(parents: arrayOfParents, childrenKey: "Children", expandableKey: "Expanded", key: "Id")
         }
+        kjtreeInstance.isInitiallyExpanded = true
+        kjtreeInstance.animation = .fade
+        
         
         tableview.delegate = self
         tableview.dataSource = self
@@ -158,7 +161,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let node = kjtreeInstance.tableView(tableView, didSelectRowAt: indexPath)
         print(node.index)
-        print(node.keyIdentity)
+        print(node.key)
         // if you've added any identifier or used indexing format
         print(node.givenIndex)
     }

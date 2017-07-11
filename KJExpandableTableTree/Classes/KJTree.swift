@@ -15,6 +15,9 @@ public class KJTree{
     fileprivate var arrayParents: [Parent] = []
     fileprivate var arrayVisibles: [Node] = []
     
+    // Animation property
+    public var animation: UITableViewRowAnimation = .fade
+    
     public init() {
         
     }
@@ -158,7 +161,7 @@ public class KJTree{
     /*
      Dynamic tree creation ------------------------------------------------------------------------------------------
      */
-    public init(parents: NSArray, childrenKey: String, idKey: String? = nil) {
+    public init(parents: NSArray, childrenKey: String, expandableKey: String? = nil, key: String? = nil) {
         
         for i in 0..<parents.count {
             
@@ -169,32 +172,47 @@ public class KJTree{
                 continue
             }
             
+            // parent instance
             let parentInstance = Parent()
-            if let idKeyConfirmed = idKey {
+            
+            // get key
+            if let idKeyConfirmed = key {
                 if let key = parentConfirmed.object(forKey: idKeyConfirmed) as? String {
-                    parentInstance.keyIdentity = key
+                    parentInstance.key = key
                 }else{
                     if let keyAny = parentConfirmed.object(forKey: idKeyConfirmed) {
-                        parentInstance.keyIdentity = "\(keyAny)"
+                        parentInstance.key = "\(keyAny)"
                     }
                 }
-                
             }
             
+            // check childs
             guard let childs = parentConfirmed.object(forKey: childrenKey) as? NSArray, childs.count != 0 else{
                 arrayParents.append(parentInstance)
                 continue
             }
             
-            let arrayOfChilds: [Child] = self.addChildsInTree(childs: childs, childrenKey: childrenKey, idKey: idKey)
-            parentInstance.arrayChilds = arrayOfChilds
+            // Check expanded status
+            if let expanded = parentConfirmed.object(forKey: expandableKey ?? "") as? Bool, expanded {
+                parentInstance.isVisibility = true
+            } else if let expanded = parentConfirmed.object(forKey: expandableKey ?? "") as? String, expanded.lowercased() == "true" {
+                parentInstance.isVisibility = true
+            }
+            
+            let childsAndExpandedState = self.addChildsInTree(childs: childs, childrenKey: childrenKey, expandableKey: expandableKey, key: key)
+            parentInstance.arrayChilds = childsAndExpandedState.0
+            if parentInstance.isVisibility {
+                parentInstance.expandedRows = childsAndExpandedState.0.count + childsAndExpandedState.1
+            }
             
             arrayParents.append(parentInstance)
         }
     }
-    func addChildsInTree(childs: NSArray, childrenKey: String, idKey: String? = nil) -> [Child]{
+    func addChildsInTree(childs: NSArray, childrenKey: String, expandableKey: String? = nil, key: String? = nil) -> ([Child], NSInteger){
         
         var arrayOfChilds: [Child] = []
+        var countOfExpandableRows = 0
+        
         for i in 0..<childs.count {
             
             let child = childs[i] as? NSDictionary
@@ -204,30 +222,44 @@ public class KJTree{
                 continue
             }
             
+            // get key
             let childInstance = Child()
-            if let idKeyConfirmed = idKey {
+            if let idKeyConfirmed = key {
                 if let key = childConfirmed.object(forKey: idKeyConfirmed) as? String {
-                    childInstance.keyIdentity = key
+                    childInstance.key = key
                 }else{
                     if let keyAny = childConfirmed.object(forKey: idKeyConfirmed) {
-                        childInstance.keyIdentity = "\(keyAny)"
+                        childInstance.key = "\(keyAny)"
                     }
                 }
                 
             }
             
+            // check childs
             guard let childs = child?.object(forKey: childrenKey) as? NSArray, childs.count != 0 else{
                 arrayOfChilds.append(childInstance)
                 continue
             }
             
-            let arrayOfSubChilds = self.addChildsInTree(childs: childs, childrenKey: childrenKey, idKey: idKey)
-            childInstance.arrayChilds = arrayOfSubChilds
+            // Check expanded status
+            if let expanded = childConfirmed.object(forKey: expandableKey ?? "") as? Bool, expanded {
+                childInstance.isVisibility = true
+            } else if let expanded = childConfirmed.object(forKey: expandableKey ?? "") as? String, expanded.lowercased() == "true" {
+                childInstance.isVisibility = true
+            }
+            
+            // get visible childs
+            let childsAndExpandedState = self.addChildsInTree(childs: childs, childrenKey: childrenKey, expandableKey: expandableKey, key: key)
+            childInstance.arrayChilds = childsAndExpandedState.0
+            if childInstance.isVisibility {
+                childInstance.expandedRows = childsAndExpandedState.0.count + childsAndExpandedState.1
+                countOfExpandableRows += childInstance.expandedRows
+            }
             
             arrayOfChilds.append(childInstance)
         }
         
-        return arrayOfChilds
+        return (arrayOfChilds, countOfExpandableRows)
     }
     /*
      ----------------------------------------------------------------------------------------------------------------
@@ -249,7 +281,7 @@ public class KJTree{
             // get parent instance and check childs of it, if yes go through it?
             let parent = arrayParents[i]
             
-            let node = Node(indexParam: "\(i)", idParam: parent.keyIdentity, givenIndexParam: parent.givenIndex)
+            let node = Node(index: "\(i)", id: parent.key, givenIndex: parent.givenIndex)
             arrayVisibles.append(node)
             
             var currentState: State = .none // State decision open, close or none.
@@ -278,7 +310,7 @@ public class KJTree{
             
             let childIndex = parentIndex + ".\(i)"
             
-            let node = Node(indexParam: childIndex, idParam: child.keyIdentity, givenIndexParam: child.givenIndex)
+            let node = Node(index: childIndex, id: child.key, givenIndex: child.givenIndex)
             node.index = childIndex
             arrayVisibles.append(node)
             
@@ -360,8 +392,19 @@ public class KJTree{
                 for i in 1...parent.arrayChilds.count{
                     cellsToBeUpdated.append(indexPath.row+i)
                 }
+                
+                
+                // Check no. of rows kept default as expanded!
+                let lastValue = cellsToBeUpdated.last
+                let countOfExpandedRowsInsideTheseChilds = self.detectVisibleSubCells(parent.arrayChilds)
+                if countOfExpandedRowsInsideTheseChilds != 0{
+                    for i in 1...countOfExpandedRowsInsideTheseChilds {
+                        cellsToBeUpdated.append(lastValue! + i)
+                    }
+                }
+                
                 // total no. of rows expanded
-                parent.expandedRows = parent.arrayChilds.count
+                parent.expandedRows = cellsToBeUpdated.count
             }else{
                 // Shrink
                 // for shrink also, append childs of parent, because we about to delete this rows from visible list.
@@ -389,8 +432,10 @@ public class KJTree{
         var indexpathsInserted: [IndexPath] = []
         // for effects of plus, minus or none based on expand, shrink.
         var updateStateOfRow: NSInteger = -1
+        
+        
         for row in cellsToBeUpdated {
-            // access previous cell to be updated with effects of plus, minus or none.
+            // access previous cell, which we will update with effect of plus, minus or none.
             if updateStateOfRow == -1{
                 updateStateOfRow = row-1
             }
@@ -399,10 +444,10 @@ public class KJTree{
         }
         if expansion == .expand {
             // Insert rows
-            tableView.insertRows(at: indexpathsInserted, with: .fade)
+            tableView.insertRows(at: indexpathsInserted, with: animation)
         }else{
             // remove rows
-            tableView.deleteRows(at: indexpathsInserted, with: .fade)
+            tableView.deleteRows(at: indexpathsInserted, with: animation)
         }
         // indicates there is some expansion or shrinking by updating previous cell with plus, minus or none.
         if updateStateOfRow != -1 {
@@ -442,9 +487,19 @@ public class KJTree{
                 for i in 1...child.arrayChilds.count{
                     cellsToBeUpdated.append(index+i)
                 }
+                
+                // Check no. of rows kept default as expanded!
+                let lastValue = cellsToBeUpdated.last
+                let countOfExpandedRowsInsideTheseChilds = self.detectVisibleSubCells(child.arrayChilds)
+                if countOfExpandedRowsInsideTheseChilds != 0{
+                    for i in 1...countOfExpandedRowsInsideTheseChilds {
+                        cellsToBeUpdated.append(lastValue! + i)
+                    }
+                }
+                
                 // total no. of rows expanded
-                child.expandedRows = child.arrayChilds.count
-                return child.arrayChilds.count
+                child.expandedRows = cellsToBeUpdated.count
+                return cellsToBeUpdated.count
             }else{
                 // Shrink
                 
@@ -471,6 +526,15 @@ public class KJTree{
             return openNoOfChilds
         }
     }
+    func detectVisibleSubCells(_ childs: [Child]) -> NSInteger{
+        var count = 0
+        for child in childs{
+            if child.isVisibility {
+                count += child.arrayChilds.count + self.detectVisibleSubCells(child.arrayChilds)
+            }
+        }
+        return count
+    }
     func closeAllVisibleCells(childs: [Child]) {
         for child in childs {
             child.isVisibility = false
@@ -486,6 +550,27 @@ public class KJTree{
     /*
      ----------------------------------------------------------------------------------------------------------------
      */
+    
+    
+    
+    
+    public var isInitiallyExpanded = false {
+        didSet {
+            if isInitiallyExpanded {
+                self.expandAllInitiallly()
+            }
+        }
+    }
+    
+    func expandAllInitiallly() {
+        
+        for parent in arrayParents {
+            
+            parent.isVisibility = true
+            let count = parent.arrayChilds.count + parent.makeAllChildsExpanded(parent.arrayChilds)
+            parent.expandedRows = count
+        }
+    }
     
     
 }
@@ -506,7 +591,7 @@ public class Node {
     fileprivate var arrayChilds: [Child] = []
     
     // identity key
-    public var keyIdentity: String = ""
+    public var key: String = ""
     
     // Private instances
     fileprivate var isVisibility = false    // This will visible or invisible no of rows based on selection.
@@ -523,11 +608,34 @@ public class Node {
     public init() {
         
     }
-    public init(indexParam: String, idParam: String, givenIndexParam: String) {
-        index = indexParam
-        id = idParam
-        keyIdentity = idParam
-        givenIndex = givenIndexParam
+    public init(index: String, id: String, givenIndex: String) {
+        self.index = index
+        self.id = id
+        self.key = id
+        self.givenIndex = givenIndex
+    }
+    
+    func grabTotalDefaultExpandedRowsCount(_ childs: [Child]) -> NSInteger {
+        var count = 0
+        for child in childs {
+            if child.isVisibility {
+                count = child.arrayChilds.count + self.grabTotalDefaultExpandedRowsCount(child.arrayChilds)
+            }
+        }
+        return count
+    }
+    
+    func makeAllChildsExpanded(_ childs: [Child]) -> NSInteger {
+        var count = 0
+        for child in childs {
+            if child.arrayChilds.count > 0 {
+                child.isVisibility = true
+                let childCount = child.arrayChilds.count + self.makeAllChildsExpanded(child.arrayChilds)
+                child.expandedRows = childCount
+                count += childCount
+            }
+        }
+        return count
     }
 }
 
@@ -536,19 +644,30 @@ public class Parent: Node{
     public override init() {
         super.init()
     }
-    public init(childs: () -> [Child]) {
+    public init(expanded: Bool = false, childs: () -> [Child]) {
         super.init()
-        arrayChilds = childs()
+        super.arrayChilds = childs()
+        super.isVisibility = expanded
+        if expanded {
+            let count = childs().count + super.grabTotalDefaultExpandedRowsCount(childs())
+            super.expandedRows = count
+        }
         // print(arrayChilds)
     }
+    
     public init(key: String){
         super.init()
-        keyIdentity = key
+        super.key = key
     }
-    public init(key: String ,childs: () -> [Child]) {
+    public init(key: String ,expanded: Bool = false, childs: () -> [Child]) {
         super.init()
-        keyIdentity = key
-        arrayChilds = childs()
+        super.key = key
+        super.arrayChilds = childs()
+        super.isVisibility = expanded
+        if expanded {
+            let count = childs().count + super.grabTotalDefaultExpandedRowsCount(childs())
+            super.expandedRows = count
+        }
         // print(arrayChilds)
     }
 }
@@ -557,20 +676,32 @@ public class Child: Node{
     public override init() {
         super.init()
     }
-    public init(subChilds: () -> [Child]) {
+    public init(expanded: Bool = false, subChilds: () -> [Child]) {
         super.init()
-        arrayChilds = subChilds()
-        // print(arrayChilds)
+        super.arrayChilds = subChilds()
+        
+        // Check expanded status
+        super.isVisibility = expanded
+        if expanded {
+            let count = subChilds().count + super.grabTotalDefaultExpandedRowsCount(subChilds())
+            super.expandedRows = count
+        }
     }
     public init(key: String){
         super.init()
-        keyIdentity = key
+        super.key = key
     }
-    public init(key: String, subChilds: () -> [Child]) {
+    public init(key: String, expanded: Bool = false, subChilds: () -> [Child]) {
         super.init()
-        keyIdentity = key
-        arrayChilds = subChilds()
-        // print(arrayChilds)
+        super.key = key
+        super.arrayChilds = subChilds()
+        
+        // Check expanded status
+        super.isVisibility = expanded
+        if expanded {
+            let count = subChilds().count + super.grabTotalDefaultExpandedRowsCount(subChilds())
+            super.expandedRows = count
+        }
     }
 }
 
