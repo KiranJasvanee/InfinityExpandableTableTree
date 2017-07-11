@@ -161,18 +161,14 @@ kjtreeInstance = KJTree(indices:
 *Swifty* robust way to initialize this library
 ```swift 
 // KJ Tree instances -------------------------
-var arrayTree:[Parent] = []
-var kjtreeInstance: KJTree = KJTree()
-    
-override func viewDidLoad() {
-        super.viewDidLoad()
+var kjtreeInstance: KJTree?
         
-        // You can easily identify here, I've one parent called parent1, 3 childs inside it, 2 sub childs inside 2nd child, and 2 more sub childs inside 2nd sub child.
-        // You can add as many as internal level of childs hierarchy.
-        // I've provided a block of each parent and child, use this block to return no of childs [Child] inside parent/child.
-        // this will provide you a robust visibility of static tree.
-        let parent1 = Parent() { () -> [Child] in
-            
+// You can easily identify here, I've one parent called parent1, 3 childs inside it, 2 sub childs inside 2nd child, and 2 more sub childs inside 2nd sub child.
+// You can add as many as internal level of childs hierarchy.
+// I've provided a block of each parent and child, use this block to return no of childs [Child] inside parent/child.
+// this will provide you a robust visibility of static tree.
+
+        let parent1 = Parent() { () -> [Child] in            
             let child1 = Child()
             let child2 = Child(subChilds: { () -> [Child] in
                 let subchild1 = Child()
@@ -190,9 +186,7 @@ override func viewDidLoad() {
             
             return [child1, child2, child3]
         }
-        arrayTree.append(parent1)
-        kjtreeInstance = KJTree(Parents: arrayTree)
-}
+        kjtreeInstance? = KJTree(Parents: [parent1])
 ```
 I've added 2 more parents for my demo simulation
 
@@ -263,6 +257,8 @@ Use `node` instance and it's `index`/`givenIndex` to verify specific cell press,
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let node = kjtreeInstance.tableView(tableView, didSelectRowAt: indexPath)
         print(node.index)
+        // if you've provided a 'Key'/'Id', you will receive it here.
+        print(node.keyIdentity)
         // if you've added any identifier or used indexing format
         print(node.givenIndex)
 }
