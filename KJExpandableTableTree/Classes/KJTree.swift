@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class KJTree{
+@objc public class KJTree : NSObject{
     
     // Parent to child collection.
     fileprivate var arrayParents: [Parent] = []
@@ -581,12 +581,12 @@ extension String {
     }
 }
 
-public enum State{
+@objc public enum State: Int{
     case open, close, none
 }
 
 
-public class Node {
+@objc public class Node: NSObject {
     
     fileprivate var arrayChilds: [Child] = []
     
@@ -639,7 +639,7 @@ public class Node {
     }
 }
 
-public class Parent: Node{
+@objc public class Parent: Node{
     
     public override init() {
         super.init()
@@ -671,7 +671,7 @@ public class Parent: Node{
         // print(arrayChilds)
     }
 }
-public class Child: Node{
+@objc public class Child: Node{
     
     public override init() {
         super.init()
