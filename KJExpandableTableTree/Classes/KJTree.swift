@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-@objc public class KJTree : NSObject{
+@objc public class KJTree : NSObject {
     
     // Parent to child collection.
     fileprivate var arrayParents: [Parent] = []
     fileprivate var arrayVisibles: [Node] = []
     
     // Animation property
-    public var animation: UITableViewRowAnimation = .fade
+    public var animation: UITableView.RowAnimation = .fade
     
-    public init() {
-        
+	public override init() {
+
     }
-    
+	
     public init(Parents: [Parent]) {
         arrayParents = Parents
     }
@@ -31,6 +31,7 @@ import UIKit
      Parents, childs creation based on indecies -----------------------------------------------------------------------------------------
      */
     public init(indices: [String]) {
+		super.init()
         
         for i in 0..<indices.count{
             
@@ -162,7 +163,8 @@ import UIKit
      Dynamic tree creation ------------------------------------------------------------------------------------------
      */
     public init(parents: NSArray, childrenKey: String, expandableKey: String? = nil, key: String? = nil) {
-        
+        super.init()
+		
         for i in 0..<parents.count {
             
             let parent = parents[i] as? NSDictionary
@@ -208,6 +210,7 @@ import UIKit
             arrayParents.append(parentInstance)
         }
     }
+	
     func addChildsInTree(childs: NSArray, childrenKey: String, expandableKey: String? = nil, key: String? = nil) -> ([Child], NSInteger){
         
         var arrayOfChilds: [Child] = []
@@ -605,9 +608,10 @@ extension String {
     public var id: String = ""
     public var givenIndex: String = ""
     
-    public init() {
-        
+	public override init() {
+
     }
+	
     public init(index: String, id: String, givenIndex: String) {
         self.index = index
         self.id = id
