@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         
         tableview.dataSource = self
         tableview.delegate = self
-        tableview.rowHeight = UITableViewAutomaticDimension
+        tableview.rowHeight = UITableView.automaticDimension
         tableview.estimatedRowHeight = 44
         tableview.tableFooterView = UIView(frame: .zero)
     }

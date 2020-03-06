@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KJExpandableTableTree'
-  s.version          = '1.1.2'
+  s.version          = '1.2.0'
   s.summary          = 'A Expandable Tableview Cells'
 
 # This description is used to generate tags and improve search results.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
-Provides a tableview cell expansion (expanding cell area - subcells'), you can expand cells up to level ∞-1. It's on Swift 3.0.
+Provides a tableview cell expansion (expanding cell area - subcells'), you can expand cells up to level ∞-1. It's on Swift 4.2.
                        DESC
 
   s.homepage         = 'https://github.com/KiranJasvanee/KJExpandableTableTree'

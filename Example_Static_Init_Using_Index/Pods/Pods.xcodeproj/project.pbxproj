@@ -30,12 +30,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		023D8E208EC6A801EDF0A37B44E4F629 /* KJExpandableTableTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KJExpandableTableTree.framework; path = KJExpandableTableTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		023D8E208EC6A801EDF0A37B44E4F629 /* KJExpandableTableTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KJExpandableTableTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		114F0D268EA7E8F396E96ADA84324898 /* KJTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KJTree.swift; sourceTree = "<group>"; };
 		1A14BCC0C1648E02BD60B6D23FD4933E /* Pods-KJExpandableTableTree_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJExpandableTableTree_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1B536A5C19E7404C347B004F6BC8CA37 /* Pods-KJExpandableTableTree_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJExpandableTableTree_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1DF49F9E18D3AE248AA59BD0708D6869 /* Pods-KJExpandableTableTree_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KJExpandableTableTree_Tests.modulemap"; sourceTree = "<group>"; };
-		2559DFA94C479E68E597F025BCB6FD3B /* KJExpandableTableTree.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KJExpandableTableTree.modulemap; sourceTree = "<group>"; };
+		1DF49F9E18D3AE248AA59BD0708D6869 /* Pods-KJExpandableTableTree_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KJExpandableTableTree_Tests.modulemap"; sourceTree = "<group>"; };
+		2559DFA94C479E68E597F025BCB6FD3B /* KJExpandableTableTree.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KJExpandableTableTree.modulemap; sourceTree = "<group>"; };
 		25F9990663E15B264D4AF38CFCC7314B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2755495A75277196BC26FB98D4094FA8 /* KJExpandableTableTree-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KJExpandableTableTree-dummy.m"; sourceTree = "<group>"; };
 		4D10ED0F361A98B1CB405E952B23F50F /* Pods-KJExpandableTableTree_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJExpandableTableTree_Example-resources.sh"; sourceTree = "<group>"; };
@@ -44,20 +44,20 @@
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6753685765371D48888C6ED607DC50A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		692191841FA6B4B107FE5F686BFDC26F /* Pods-KJExpandableTableTree_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KJExpandableTableTree_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6BD745372190DB19B60F55A7F33E68F6 /* Pods_KJExpandableTableTree_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KJExpandableTableTree_Example.framework; path = "Pods-KJExpandableTableTree_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD745372190DB19B60F55A7F33E68F6 /* Pods_KJExpandableTableTree_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJExpandableTableTree_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C6A0B4A38B050570716A7070ED4E78B /* Pods-KJExpandableTableTree_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KJExpandableTableTree_Tests-dummy.m"; sourceTree = "<group>"; };
 		6F78E8A947206440308D23CBFB85A233 /* Pods-KJExpandableTableTree_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJExpandableTableTree_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7EBC50BAD9B4C2F202F25730610BDFA0 /* KJExpandableTableTree-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJExpandableTableTree-prefix.pch"; sourceTree = "<group>"; };
 		7F7C9EA3F2E28BB4A4EED5FF6465A0BA /* Pods-KJExpandableTableTree_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KJExpandableTableTree_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F9D9583153A85749134B7D5D72E9898 /* Pods-KJExpandableTableTree_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJExpandableTableTree_Example-frameworks.sh"; sourceTree = "<group>"; };
 		8D82BCA4E46F9F353E7B59E6FF75410F /* KJExpandableTableTree-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KJExpandableTableTree-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		977F14FDF64A206279A8D72B9D21D22D /* Pods-KJExpandableTableTree_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJExpandableTableTree_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A4D13FC8BFD7180FE3628288E16E424C /* Pods_KJExpandableTableTree_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KJExpandableTableTree_Tests.framework; path = "Pods-KJExpandableTableTree_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D13FC8BFD7180FE3628288E16E424C /* Pods_KJExpandableTableTree_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KJExpandableTableTree_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB54D2BC931F08EDEC57A15A7FC8C89 /* KJExpandableTableTree.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KJExpandableTableTree.xcconfig; sourceTree = "<group>"; };
 		BEA07670FEAF60D7811EC0CDD8FBA5E1 /* Pods-KJExpandableTableTree_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJExpandableTableTree_Tests-resources.sh"; sourceTree = "<group>"; };
 		D71B406233D6BFFA7A10F9D9D65518C9 /* Pods-KJExpandableTableTree_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KJExpandableTableTree_Example-umbrella.h"; sourceTree = "<group>"; };
-		DA0A24DA15AE7DC4BAF94AA0C9E0391A /* Pods-KJExpandableTableTree_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-KJExpandableTableTree_Example.modulemap"; sourceTree = "<group>"; };
+		DA0A24DA15AE7DC4BAF94AA0C9E0391A /* Pods-KJExpandableTableTree_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KJExpandableTableTree_Example.modulemap"; sourceTree = "<group>"; };
 		E1C684A89017790C4B281AFD24E676CC /* Pods-KJExpandableTableTree_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KJExpandableTableTree_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E7EC7F3BA0182F5CADC0D89327DF34A8 /* Pods-KJExpandableTableTree_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KJExpandableTableTree_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F051F7883AB8832ACD043971830F72B9 /* Pods-KJExpandableTableTree_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KJExpandableTableTree_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -115,7 +115,6 @@
 			children = (
 				114F0D268EA7E8F396E96ADA84324898 /* KJTree.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -133,7 +132,6 @@
 			children = (
 				1D59C581C907394FF28EDE6B4E3DA4BE /* Classes */,
 			);
-			name = KJExpandableTableTree;
 			path = KJExpandableTableTree;
 			sourceTree = "<group>";
 		};
@@ -313,7 +311,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1010;
+				TargetAttributes = {
+					51FA3A01B3912ADB57A1D2493C2EA409 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -382,23 +385,33 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -447,7 +460,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -464,22 +478,32 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -493,6 +517,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -562,7 +587,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
