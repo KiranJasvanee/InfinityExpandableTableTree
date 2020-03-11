@@ -1,3 +1,8 @@
+> **THIS PROJECT IS NO LONGER MAINTAINED.   
+WILL COME UP WITH NEW ONE INCLUDING MORE USECASES, FLEXIBLE ARCHITECTURE & ONE FOR SWIFTUI TOO**
+
+---
+
 <p align="center">
   <img src="Resources/LogoDark.png"  style="width: 400px;" width="400" />
 </p>
